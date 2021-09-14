@@ -92,7 +92,7 @@ class HttpClient(object):
         return self.request('delete', url, params=params, **kwargs)
 
     def request(self, method, url, params=None, body=None, **kwargs):
-        print method, url, params, body, kwargs
+        print(method, url, params, body, kwargs)
         """
         Send an HTTP request.
 
@@ -194,7 +194,7 @@ class HttpClient(object):
             import http.client as http_client
         except ImportError:
             # Python 2
-            import httplib as http_client
+            import http.client as http_client
         http_client.HTTPConnection.debuglevel = 1
 
         logging.basicConfig()

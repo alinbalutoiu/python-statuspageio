@@ -84,7 +84,7 @@ class PageService(object):
         if not kwargs:
             raise Exception('attributes are missing')
 
-        attributes = dict((k, v) for k, v in kwargs.iteritems()
+        attributes = dict((k, v) for k, v in kwargs.items()
                           if k in OPTS_KEYS_TO_PERSIST)
 
         page = self.http_client.patch('/pages/{page_id}.json'.format(page_id=self.page_id),
@@ -152,7 +152,7 @@ class ComponentsService(object):
         if not kwargs:
             raise Exception('attributes are missing')
 
-        attributes = dict((k, v) for k, v in kwargs.iteritems()
+        attributes = dict((k, v) for k, v in kwargs.items()
                           if k in self.OPTS_KEYS_TO_PERSIST)
 
         _, _, component = self.http_client.post(
@@ -199,7 +199,7 @@ class ComponentsService(object):
         if not kwargs:
             raise Exception('attributes for Contact are missing')
 
-        attributes = dict((k, v) for k, v in kwargs.iteritems()
+        attributes = dict((k, v) for k, v in kwargs.items()
                           if k in self.OPTS_KEYS_TO_PERSIST)
 
         _, _, component = self.http_client.patch(
@@ -289,7 +289,7 @@ class IncidentsService(object):
         if not kwargs:
             raise Exception('attributes are missing')
 
-        attributes = dict((k, v) for k, v in kwargs.iteritems()
+        attributes = dict((k, v) for k, v in kwargs.items()
                           if k in OPTS_KEYS_TO_PERSIST)
 
         _, _, component = self.http_client.post(
@@ -323,7 +323,7 @@ class IncidentsService(object):
         if not kwargs:
             raise Exception('attributes are missing')
 
-        attributes = dict((k, v) for k, v in kwargs.iteritems()
+        attributes = dict((k, v) for k, v in kwargs.items()
                           if k in OPTS_KEYS_TO_PERSIST)
 
         _, _, incident = self.http_client.post(
@@ -372,7 +372,7 @@ class IncidentsService(object):
         if not kwargs:
             raise Exception('attributes for Contact are missing')
 
-        attributes = dict((k, v) for k, v in kwargs.iteritems()
+        attributes = dict((k, v) for k, v in kwargs.items()
                           if k in OPTS_KEYS_TO_PERSIST)
 
         _, _, component = self.http_client.patch(
@@ -438,7 +438,7 @@ class SubscribersService(object):
         if not kwargs:
             raise Exception('attributes are missing')
 
-        attributes = dict((k, v) for k, v in kwargs.iteritems()
+        attributes = dict((k, v) for k, v in kwargs.items()
                           if k in OPTS_KEYS_TO_PERSIST)
 
         _, _, subscriber = self.http_client.post(
@@ -542,7 +542,7 @@ class MetricsService(object):
         if not kwargs:
             raise Exception('attributes are missing')
 
-        attributes = dict((k, v) for k, v in kwargs.iteritems()
+        attributes = dict((k, v) for k, v in kwargs.items()
                           if k in OPTS_KEYS_TO_PERSIST)
 
         _, _, metric = self.http_client.post(
@@ -567,7 +567,7 @@ class MetricsService(object):
         if not kwargs:
             raise Exception('attributes are missing')
 
-        attributes = dict((k, v) for k, v in kwargs.iteritems()
+        attributes = dict((k, v) for k, v in kwargs.items()
                           if k in OPTS_KEYS_TO_PERSIST)
 
         _, _, metric = self.http_client.post(
@@ -661,7 +661,7 @@ class UsersService(object):
         if not kwargs:
             raise Exception('attributes are missing')
 
-        attributes = dict((k, v) for k, v in kwargs.iteritems()
+        attributes = dict((k, v) for k, v in kwargs.items()
                           if k in OPTS_KEYS_TO_PERSIST)
 
         _, _, user = self.http_client.post(
